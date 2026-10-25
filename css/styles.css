@@ -328,3 +328,14 @@ a.tarjeta:hover { box-shadow: var(--sombra); transform: translateY(-3px); border
 .visualmente-oculto {
   position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
 }
+
+/* ---------- Galería ---------- */
+.galeria { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 700px) { .galeria { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
+.galeria figure { margin: 0; border-radius: var(--radio); overflow: hidden; aspect-ratio: 4 / 3; background: var(--guinda-claro); }
+.galeria img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.galeria figure:hover img { transform: scale(1.04); }
+
+.portada .firma-lema { font-family: var(--fuente-firma); color: var(--guinda); font-size: 1.6rem; line-height: 1.3; margin: -6px 0 14px; }
+.portada-foto img, .bloque-foto img { height: auto; }
+.portada-foto img { object-position: center 75%; }
